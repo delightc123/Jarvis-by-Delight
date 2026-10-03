@@ -1220,9 +1220,9 @@ class AnalyticsConfig:
     or hardware identifiers are ever sent. See ``docs/telemetry.md``.
     """
 
-    enabled: bool = True
-    host: str = "https://34.231.106.201.sslip.io"
-    key: str = "phc_ysKu72QaxzYNmDpHFcesD2ZZAe68zkdWJEKoYYkc5e3n"
+    enabled: bool = False
+    host: str = ""
+    key: str = ""
     anon_id_path: str = field(default_factory=lambda: str(get_config_dir() / "anon_id"))
     flush_interval_seconds: int = 30
     flush_at_size: int = 100

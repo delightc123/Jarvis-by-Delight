@@ -243,14 +243,14 @@ fi
 # No content, no IPs (handled by PostHog disable_geoip on server),
 # no hardware identifiers — just OS, arch, elapsed time, and stage name.
 #
-ANALYTICS_HOST="${OPENJARVIS_ANALYTICS_HOST:-https://34.231.106.201.sslip.io}"
-ANALYTICS_KEY="${OPENJARVIS_ANALYTICS_KEY:-phc_ysKu72QaxzYNmDpHFcesD2ZZAe68zkdWJEKoYYkc5e3n}"
+ANALYTICS_HOST="${OPENJARVIS_ANALYTICS_HOST:-}"
+ANALYTICS_KEY="${OPENJARVIS_ANALYTICS_KEY:-}"
 ANON_ID_FILE="$OPENJARVIS_HOME/anon_id"
 INSTALL_START_EPOCH="$(date +%s)"
 CURRENT_STAGE=""
 
 analytics_enabled() {
-    return 0
+    return 1
 }
 
 detect_os() {
